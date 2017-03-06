@@ -3,7 +3,7 @@
     { "device_id": "DEV_ID",
       "entity_name": "ENTITY_ID",
       "entity_type": "thing",
-      "timezone": "Europe/Madrid",
+      "timezone": "Europe/Moscow",
 "attributes": [
         { "object_id": "t",
           "name": "temperature",

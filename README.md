@@ -27,9 +27,27 @@ python-IDAS4/SensorsUL20/    -> Specific tools to talk to IDAS2.6 to send IoT Da
                            There is an specific README.md file in this directory.
 
 
-Credits
-------------
-- Developed by Carlos Ralli Ucendo (@carlosralli). Apr 2015.
-- Thanks to Rafael Baños Lopez for his great support and lots of testing/debugging efforts!
+How to init
+-------------
+```bash
+git clone https://github.com/itmo-swm/fiware-python-client
+cd fiware-python-client/Sensors_UL20
+python CreateService.py my_test 4jggokgpepnvsb2uv4s40d59ou
+python RegisterDevice.py SENSOR_TEMP Sensor1 TempTest1
+python SendObservation.py Sensor1 't|24'
+python ../ContextBroker/GetEntityById.py TempTest1
+```
 
+How to send new value
+-------------
+```bash
+cd fiware-python-client/Sensors_UL20
+python SendObservation.py Sensor1 't|24'
+```
 
+How to get current value
+-------------
+```bash
+cd fiware-python-client/Sensors_UL20
+python ../ContextBroker/GetEntityById.py TempTest1
+```
